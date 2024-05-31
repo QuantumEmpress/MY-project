@@ -1,0 +1,133 @@
+:root {
+  --background-light: #fff;
+  --background-dark: #333;
+  --text-light: #000;
+  --text-dark: #fff;
+  --primary-color: #6200ea;
+  --secondary-color: #03dac5;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.app.light-mode {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+.app.dark-mode {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+.theme-toggle {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+input[type="text"] {
+  padding: 15px;
+  font-size: 1.2rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.movie-card {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.movie-card h3 {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.movie-overview {
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .app {
+    padding: 40px;
+  }
+
+  .theme-toggle {
+    font-size: 2.5rem;
+  }
+
+  input[type="text"] {
+    font-size: 1.5rem;
+  }
+
+  .movie-card {
+    width: 250px;
+  }
+
+  .movie-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .movie-overview {
+    font-size: 1rem;
+  }
+}
+.app {
+  /* Keep your existing styles for .app */
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-top: 100%;
+  padding-left: 100%; /* Add margin to separate header from movie list */
+}
+
+h1 {
+  margin-bottom: 10px; /* Add margin below the heading */
+}
